@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Add some new data to the database{% endblock %}</h1>
+    <form method="post">
+        <label for="title">Video ID</label>
+        <br>
+        <input style="color:orange; font-size:20px;"type="text" name="ID"
+               placeholder="ID (must be a unique number)"
+               value="{{ request.form['ID'] }}"></input>
+        <br>
+        <label for="title">Views</label>
+        <br>
+        <input style="color:orange; font-size:20px;"type="text" name="views"
+               placeholder="views as an int"
+               value="{{ request.form['views'] }}"></input>
+        <br>
+        <label for="title">Likes</label>
+        <br>
+        <input style="color:orange; font-size:20px;" type="text" name="likes"
+               placeholder="likes as an int"
+               value="{{ request.form['likes'] }}"></input>
+        <br>
+        <label for="title">Video Title</label>
+        <br>
+        <input style="color:orange; font-size:20px;" type="text" name="title"
+               placeholder="Video title"
+               value="{{ request.form['title'] }}"></input>
+        <br>
+        <button style="color:brown; font-size:50px;"type="submit">Submit</button>
+    </form>
+{% endblock %}

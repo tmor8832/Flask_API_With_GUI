@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Edit the data entry{% endblock %}</h1>
+    <form method="post">
+        <label for="title">Video ID</label>
+        <br>
+        <input style="color:red;font-size:15px;" readonly type="text" name="ID"
+               placeholder="{{video_id}}"
+               value="{{video_id}}"></input>
+        <br>
+        <label for="title">Views</label>
+        <br>
+        <input style="color:rgb(29, 144, 252);  font-size:15px;" type="text" name="views"
+               placeholder="{{entry.views}}"
+               value="{{ request.form['views'] }}"></input>
+        <br>
+        <label for="title">Likes</label>
+        <br>
+        <input style="color:rgb(29, 144, 252); font-size:15px;" type="text" name="likes"
+               placeholder="{{entry.likes}}"
+               value="{{ request.form['likes'] }}"></input>
+        <br>
+        <label for="title">Video Title</label>
+        <br>
+        <input style="color:rgb(29, 144, 252); font-size:15px;" type="text" name="title"
+               placeholder="{{entry.name}}"
+               value="{{ request.form['title'] }}"></input>
+        <br>
+        <button style="color:green; font-size:50px;"type="submit">Submit</button>
+    </form>
+{% endblock %}
