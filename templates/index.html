@@ -4,7 +4,7 @@
     <h1>{% block title %} Video Entries {% endblock %}</h1>
     {% for entry in entries %}
         <div class='message'>
-            <h3 style="color:blue; font-size:20px;">Name: {{entry.name}}, Views: {{ entry.views }}, Likes: {{entry.likes}}</h3>
+            <h3 style="color:blue; font-size:20px;"> Name: {{entry.name}}, Views: {{ entry.views }}, Likes: {{entry.likes}}</h3>
             <p> <a href="{{ url_for('edit', video_id=entry.id)}}"> Edit</a> </p>
             <p> <a href="{{ url_for('delete', video_id=entry.id)}}"> Delete</a> </p>
         </div>

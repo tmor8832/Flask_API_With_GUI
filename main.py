@@ -144,7 +144,6 @@ class Video(Resource):
         result = VideoModel.query.filter_by(id=video_id).first()
         if result:
             abort(409, message="Video id taken...")
-
         video = VideoModel(
             id=video_id, name=args['name'], views=args['views'], likes=args['likes'])
         db.session.add(video)
